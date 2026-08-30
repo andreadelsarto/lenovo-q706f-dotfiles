@@ -10,21 +10,18 @@ Item {
 
     // Palette OLED / Dark Modern
     readonly property color bgDark: "#09090b"
-    readonly property color barBg: "#cc121214"
+    readonly property color barBg: "#ee121216"
     readonly property color accentColor: "#6366f1"
     readonly property color textPrimary: "#f4f4f5"
     readonly property color textSecondary: "#a1a1aa"
-    readonly property color cardBg: "#1e1e24"
+    readonly property color cardBg: "#18181f"
 
-    // Sfondo Principale
+    // Sfondo Principale con gradiente soft
     Rectangle {
         anchors.fill: parent
-        color: root.bgDark
-
-        // Gradiente radiale decorativo sottile
-        RadialGradient {
-            anchors.fill: parent
-            opacity: 0.15
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#14141d" }
+            GradientStop { position: 1.0; color: root.bgDark }
         }
     }
 
@@ -36,35 +33,38 @@ Item {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        height: 38
+        height: 44
         color: root.barBg
         z: 100
 
         RowLayout {
             anchors.fill: parent
-            anchors.leftMargin: 20
-            anchors.rightMargin: 20
+            anchors.leftMargin: 24
+            anchors.rightMargin: 24
             spacing: 16
 
             // Logo / Nome Shell
-            Text {
-                text: "OmniTouch"
-                color: root.accentColor
-                font.pixelSize: 13
-                font.bold: true
-                font.letterSpacing: 0.5
-            }
+            RowLayout {
+                spacing: 8
+                Text {
+                    text: "OmniTouch"
+                    color: root.accentColor
+                    font.pixelSize: 15
+                    font.bold: true
+                    font.letterSpacing: 0.5
+                }
 
-            Text {
-                text: "•"
-                color: root.textSecondary
-                font.pixelSize: 10
-            }
+                Text {
+                    text: "•"
+                    color: root.textSecondary
+                    font.pixelSize: 10
+                }
 
-            Text {
-                text: "Wayland"
-                color: root.textSecondary
-                font.pixelSize: 12
+                Text {
+                    text: "Wayland"
+                    color: root.textSecondary
+                    font.pixelSize: 13
+                }
             }
 
             Item { Layout.fillWidth: true }
@@ -75,7 +75,7 @@ Item {
                 Layout.alignment: Qt.AlignHCenter
                 text: Qt.formatTime(new Date(), "hh:mm")
                 color: root.textPrimary
-                font.pixelSize: 14
+                font.pixelSize: 15
                 font.bold: true
 
                 Timer {
@@ -90,18 +90,18 @@ Item {
 
             // Indicatori di stato (Wi-Fi, Batteria, Sessione)
             RowLayout {
-                spacing: 12
+                spacing: 14
 
                 Text {
                     text: "📶 Wi-Fi"
                     color: root.textSecondary
-                    font.pixelSize: 12
+                    font.pixelSize: 13
                 }
 
                 Text {
                     text: "🔋 100%"
                     color: root.textSecondary
-                    font.pixelSize: 12
+                    font.pixelSize: 13
                 }
             }
         }
@@ -127,32 +127,32 @@ Item {
 
         ColumnLayout {
             anchors.centerIn: parent
-            spacing: 24
-            width: Math.min(parent.width - 40, 600)
+            spacing: 28
+            width: Math.min(parent.width - 60, 680)
 
             // Card di Benvenuto
             Rectangle {
                 Layout.fillWidth: true
-                height: 160
-                radius: 16
+                height: 150
+                radius: 20
                 color: root.cardBg
-                border.color: "#27272a"
+                border.color: "#2e2e38"
                 border.width: 1
 
                 ColumnLayout {
                     anchors.fill: parent
                     anchors.margins: 24
-                    spacing: 8
+                    spacing: 10
 
                     Text {
-                        text: "Benvenuto in OmniTouch OS"
+                        text: "OmniTouch Shell"
                         color: root.textPrimary
                         font.pixelSize: 22
                         font.bold: true
                     }
 
                     Text {
-                        text: "Ambiente sperimentale touch-first per Lenovo Tab P11/P12 Pro (Q706F).\nSessione isolata su postmarketOS edge."
+                        text: "Ambiente sperimentale touch-first per Lenovo Tab P11/P12 Pro (Q706F).\nEsecuzione nativa su Wayland."
                         color: root.textSecondary
                         font.pixelSize: 14
                         lineHeight: 1.3
@@ -163,7 +163,7 @@ Item {
             // Quick App Launcher Pills
             RowLayout {
                 Layout.alignment: Qt.AlignHCenter
-                spacing: 16
+                spacing: 20
 
                 Repeater {
                     model: [
@@ -174,29 +174,30 @@ Item {
                     ]
 
                     Rectangle {
-                        width: 120
-                        height: 90
-                        radius: 14
-                        color: btnArea.containsPress ? "#312e81" : (btnArea.containsMouse ? "#2e2e38" : root.cardBg)
-                        border.color: btnArea.containsPress ? root.accentColor : "#27272a"
+                        width: 130
+                        height: 100
+                        radius: 18
+                        color: btnArea.containsPress ? "#312e81" : (btnArea.containsMouse ? "#272732" : root.cardBg)
+                        border.color: btnArea.containsPress ? root.accentColor : "#2e2e38"
+                        border.width: 1
 
                         Behavior on color { ColorAnimation { duration: 150 } }
 
                         ColumnLayout {
                             anchors.centerIn: parent
-                            spacing: 6
+                            spacing: 8
 
                             Text {
                                 Layout.alignment: Qt.AlignHCenter
                                 text: modelData.icon
-                                font.pixelSize: 28
+                                font.pixelSize: 32
                             }
 
                             Text {
                                 Layout.alignment: Qt.AlignHCenter
                                 text: modelData.name
                                 color: root.textPrimary
-                                font.pixelSize: 12
+                                font.pixelSize: 13
                                 font.bold: true
                             }
                         }
@@ -223,7 +224,7 @@ Item {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-        height: 60
+        height: 64
         color: root.barBg
         z: 100
 
@@ -238,20 +239,20 @@ Item {
 
         RowLayout {
             anchors.centerIn: parent
-            spacing: 60
+            spacing: 80
 
             // Pulsante Indietro (Back)
             Rectangle {
-                width: 48
-                height: 48
-                radius: 24
+                width: 52
+                height: 52
+                radius: 26
                 color: backArea.containsPress ? "#3f3f46" : "transparent"
 
                 Text {
                     anchors.centerIn: parent
                     text: "◀"
                     color: root.textPrimary
-                    font.pixelSize: 18
+                    font.pixelSize: 20
                 }
 
                 MouseArea {
@@ -264,9 +265,9 @@ Item {
             // Barra Home Pill (Stile Gestures Touch)
             Rectangle {
                 id: homePill
-                width: 140
-                height: 8
-                radius: 4
+                width: 160
+                height: 10
+                radius: 5
                 color: pillArea.containsPress ? root.accentColor : "#71717a"
 
                 Behavior on color { ColorAnimation { duration: 150 } }
@@ -281,16 +282,16 @@ Item {
 
             // Pulsante Overview / Task Switcher
             Rectangle {
-                width: 48
-                height: 48
-                radius: 24
+                width: 52
+                height: 52
+                radius: 26
                 color: overviewArea.containsPress ? "#3f3f46" : "transparent"
 
                 Text {
                     anchors.centerIn: parent
                     text: "▢"
                     color: root.textPrimary
-                    font.pixelSize: 20
+                    font.pixelSize: 22
                 }
 
                 MouseArea {
