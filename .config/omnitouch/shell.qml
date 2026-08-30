@@ -1,24 +1,24 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Window
 
-Item {
+ApplicationWindow {
     id: root
     width: 1280
     height: 800
     visible: true
+    title: "OmniTouch OS"
 
     // Palette OLED / Dark Modern
     readonly property color bgDark: "#09090b"
-    readonly property color barBg: "#ee121216"
+    readonly property color barBg: "#f0121216"
     readonly property color accentColor: "#6366f1"
     readonly property color textPrimary: "#f4f4f5"
     readonly property color textSecondary: "#a1a1aa"
     readonly property color cardBg: "#18181f"
 
-    // Sfondo Principale con gradiente soft
-    Rectangle {
-        anchors.fill: parent
+    background: Rectangle {
         gradient: Gradient {
             GradientStop { position: 0.0; color: "#14141d" }
             GradientStop { position: 1.0; color: root.bgDark }
@@ -28,12 +28,9 @@ Item {
     // =========================================================================
     // 1. TOP STATUS BAR (Trasparente / Blur Look)
     // =========================================================================
-    Rectangle {
+    header: Rectangle {
         id: topStatusBar
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-        height: 44
+        height: 48
         color: root.barBg
         z: 100
 
@@ -120,10 +117,7 @@ Item {
     // 2. CONTENUTO CENTRALE / SKELETON WORKSPACE
     // =========================================================================
     Item {
-        anchors.top: topStatusBar.bottom
-        anchors.bottom: bottomNavBar.top
-        anchors.left: parent.left
-        anchors.right: parent.right
+        anchors.fill: parent
 
         ColumnLayout {
             anchors.centerIn: parent
@@ -219,11 +213,8 @@ Item {
     // =========================================================================
     // 3. BOTTOM NAVIGATION BAR (Touch Dock)
     // =========================================================================
-    Rectangle {
+    footer: Rectangle {
         id: bottomNavBar
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
         height: 64
         color: root.barBg
         z: 100
