@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-kwin_wayland --socket=wayland-test --width 1280 --height 800 &
-KWIN_PID=$!
-sleep 1
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/10000}"
+export WAYLAND_DISPLAY="${WAYLAND_DISPLAY:-wayland-0}"
+export QT_QPA_PLATFORM=wayland
+
+echo "==> Avvio anteprima OmniTouch (Canvas Push Pattern)..."
 if command -v quickshell &> /dev/null; then
-    WAYLAND_DISPLAY=wayland-test quickshell --config "$HOME/.config/omnitouch/shell.qml"
+    quickshell --config "$HOME/.config/omnitouch/shell.qml"
 elif command -v qml6 &> /dev/null; then
-    echo "QuickShell non trovato nel PATH, esecuzione preview con qml6..."
-    WAYLAND_DISPLAY=wayland-test qml6 "$HOME/.config/omnitouch/shell.qml"
+    qml6 "$HOME/.config/omnitouch/shell.qml"
 else
-    echo "Né quickshell né qml6 trovati per il rendering QML."
+    echo "Né quickshell né qml6 trovati."
 fi
-kill $KWIN_PID 2>/dev/null
