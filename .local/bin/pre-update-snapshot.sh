@@ -18,14 +18,14 @@ else
     echo "==> [Snapshot] Commit completato: pre-update snapshot: $TIMESTAMP"
 fi
 
-# Aggiorna/forza il tag pre-update
+# Aggiorna/forza il tag pre-update localmente
 $DOTFILES tag -f pre-update
 echo "==> [Snapshot] Tag \"pre-update\" aggiornato con successo."
 
-# Tenta il push su origin main --tags se configurato
+# Tenta il push su origin main e sincronizza i tag forzando l'aggiornamento del tag pre-update
 if $DOTFILES remote | grep -q "^origin$"; then
     echo "==> [Snapshot] Remote origin trovato. Tentativo di push..."
-    if $DOTFILES push origin main --tags; then
+    if $DOTFILES push origin main && $DOTFILES push origin refs/tags/pre-update --force; then
         echo "==> [Snapshot] Push completato con successo."
     else
         echo "==> [Snapshot] Attenzione: push fallito o permessi insufficienti."
