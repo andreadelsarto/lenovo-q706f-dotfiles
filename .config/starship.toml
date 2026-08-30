@@ -1,0 +1,31 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$package\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[⚡ ❯](bold #00ff88)"
+error_symbol = "[💥 ❯](bold #ff3366)"
+
+[directory]
+style = "bold #00f0ff"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+style = "bold #ff007f"
+symbol = "🌱 "
+
+[git_status]
+style = "bold #ffdd00"
+
+[cmd_duration]
+min_time = 2_000
+style = "bold #888888"
+format = "took [$duration]($style) "

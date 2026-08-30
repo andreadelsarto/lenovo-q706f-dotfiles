@@ -1,0 +1,8 @@
+[AC][SuspendSession]
+suspendThenHibernate=false
+
+[Battery][SuspendSession]
+suspendThenHibernate=false
+
+[Migration]
+MigratedProfilesToPlasma6=powerdevilrc

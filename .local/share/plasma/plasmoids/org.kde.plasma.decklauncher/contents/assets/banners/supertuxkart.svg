@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#091b29"/>
+      <stop offset="40%" stop-color="#0f3a5a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0f3a5a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect width="960" height="540" fill="url(#sun)"/>
+  <path d="M0,380 Q240,320 480,360 T960,340 L960,540 L0,540 Z" fill="#04121d" opacity="0.8"/>
+  <path d="M0,420 Q300,380 600,420 T960,400 L960,540 L0,540 Z" fill="#02080d"/>
+  <text x="60" y="240" font-family="sans-serif" font-weight="900" font-size="76" fill="#ffffff" letter-spacing="2">SUPERTUXKART</text>
+  <text x="64" y="290" font-family="sans-serif" font-weight="600" font-size="24" fill="#38bdf8" letter-spacing="6">3D ARCADE RACING</text>
+</svg>

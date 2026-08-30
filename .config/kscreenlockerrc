@@ -1,0 +1,10 @@
+[Daemon]
+Autolock=true
+Lock=false
+LockGrace=0
+LockOnResume=false
+RequirePassword=false
+Timeout=2
+
+[Greeter]
+WallpaperPlugin=org.kde.plasma.wordclock

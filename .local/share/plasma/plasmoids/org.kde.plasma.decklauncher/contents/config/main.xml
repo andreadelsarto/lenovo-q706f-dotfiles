@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+    <group name="General">
+        <entry name="showHeroCarousel" type="Bool">
+            <label>Mostra il carosello orizzontale in stile Steam Deck</label>
+            <default>true</default>
+        </entry>
+        <entry name="enableAnimatedOrbs" type="Bool">
+            <label>Abilita animazioni ed effetti dinamici sullo sfondo</label>
+            <default>true</default>
+        </entry>
+        <entry name="enableSoundFx" type="Bool">
+            <label>Abilita effetti sonori di navigazione UI</label>
+            <default>true</default>
+        </entry>
+        <entry name="showPerformanceOverlay" type="Bool">
+            <label>Mostra badge FPS e monitor RAM</label>
+            <default>true</default>
+        </entry>
+        <entry name="showPlaytime" type="Bool">
+            <label>Mostra indicatore tempo giocato sotto ai titoli</label>
+            <default>false</default>
+        </entry>
+        <entry name="enableCleanView" type="Bool">
+            <label>Vista Pulita: Mostra 1 sola riga di app e carosello espanso, espandibile con swipe</label>
+            <default>true</default>
+        </entry>
+        <entry name="gridColumns" type="Int">
+            <label>Numero di colonne nella griglia delle applicazioni</label>
+            <default>5</default>
+        </entry>
+        <entry name="weatherCity" type="String">
+            <label>Città per il meteo</label>
+            <default>Milano</default>
+        </entry>
+        <entry name="showWeather" type="Bool">
+            <label>Mostra meteo nella status bar superiore</label>
+            <default>true</default>
+        </entry>
+        <entry name="showFriendsOverlay" type="Bool">
+            <label>Abilita overlay KDE Connect e amici</label>
+            <default>true</default>
+        </entry>
+        <entry name="showSystemUpdates" type="Bool">
+            <label>Abilita visualizzazione aggiornamenti di sistema</label>
+            <default>true</default>
+        </entry>
+        <entry name="accentColor" type="Color">
+            <label>Colore di accento principale</label>
+            <default>#3daee9</default>
+        </entry>
+        <entry name="currentTheme" type="String">
+            <label>Tema visivo selezionato (obsidian_minimal, synthwave_84, hybrid_console, night_shift, dot_matrix_8bit, matrix_rain, drops, bubbles, starfield, aurora, ocean_calm, weather_dynamic, sunset_wilderness, manga_phantom)</label>
+            <default>obsidian_minimal</default>
+        </entry>
+        <entry name="currentLanguage" type="String">
+            <label>Lingua interfaccia (it, en, es, fr, de)</label>
+            <default>it</default>
+        </entry>
+        <entry name="customUserName" type="String">
+            <label>Nome visualizzato personalizzato per l'utente</label>
+            <default></default>
+        </entry>
+        <entry name="customUserAvatar" type="String">
+            <label>Icona avatar utente</label>
+            <default>user-identity</default>
+        </entry>
+        <entry name="favoriteApps" type="String">
+            <label>Elenco separato da virgola degli ID delle app preferite</label>
+            <default>net.supertuxkart.SuperTuxKart,org.libretro.RetroArch,org.supertuxproject.SuperTux,org.DolphinEmu.dolphin-emu,com.github.KRTirtho.Spotube,org.kde.audiotube,app.ytmdesktop.ytmdesktop,firefox,net.davidotek.pupgui2,org.kde.discover,systemsettings,org.kde.dolphin</default>
+        </entry>
+        <entry name="playTimeData" type="String">
+            <label>Mappa JSON dei minuti di gioco registrati per ogni applicazione</label>
+            <default>{}</default>
+        </entry>
+        <entry name="appLaunchOptions" type="String">
+            <label>Mappa JSON delle opzioni di lancio per applicazione (fullscreen, extra args)</label>
+            <default>{}</default>
+        </entry>
+    </group>
+</kcfg>

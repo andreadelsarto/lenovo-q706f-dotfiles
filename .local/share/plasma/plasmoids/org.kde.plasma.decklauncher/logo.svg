@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Nebula Radial Core Glow -->
+    <radialGradient id="nebulaCoreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="45%" stop-color="#818cf8" stop-opacity="0.6"/>
+      <stop offset="80%" stop-color="#c084fc" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sleek Neon Cosmic Gradient -->
+    <linearGradient id="neonDeckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Accent Ring Gradient -->
+    <linearGradient id="orbitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Cosmic Backdrop Circle -->
+  <circle cx="256" cy="256" r="236" fill="#0b0f19" stroke="url(#neonDeckGrad)" stroke-width="8" />
+
+  <!-- Ambient Nebula Swirl Halo -->
+  <circle cx="256" cy="256" r="190" fill="url(#nebulaCoreGlow)" />
+
+  <!-- Outer Orbiting Celestial Swirl Rings (Nebula Vortex) -->
+  <path d="M 130,220 C 120,150 200,100 280,110 C 370,120 420,200 400,280 C 385,340 330,390 260,395 C 180,400 120,340 135,270"
+        fill="none"
+        stroke="url(#neonDeckGrad)"
+        stroke-width="12"
+        stroke-linecap="round"
+        opacity="0.85" />
+
+  <path d="M 382,292 C 392,362 312,412 232,402 C 142,392 92,312 112,232 C 127,172 182,122 252,117 C 332,112 392,172 377,242"
+        fill="none"
+        stroke="url(#orbitGrad)"
+        stroke-width="8"
+        stroke-linecap="round"
+        opacity="0.75" />
+
+  <!-- Central Handheld Deck Silhouette Glyph -->
+  <g transform="translate(136, 176)">
+    <!-- Deck Body Outer Shell -->
+    <path d="M 30,20 
+             C 10,20 0,35 0,60 
+             L 0,100 
+             C 0,125 10,140 30,140 
+             L 55,140 
+             C 65,140 75,130 85,120 
+             L 155,120 
+             C 165,130 175,140 185,140 
+             L 210,140 
+             C 230,140 240,125 240,100 
+             L 240,60 
+             C 240,35 230,20 210,20 
+             L 185,20 
+             C 175,20 165,30 155,40 
+             L 85,40 
+             C 75,30 65,20 55,20 
+             Z" 
+          fill="#111827" 
+          stroke="url(#neonDeckGrad)" 
+          stroke-width="7" 
+          stroke-linejoin="round"/>
+
+    <!-- Screen Area (Nebula Window) -->
+    <rect x="72" y="42" width="96" height="76" rx="8" fill="#030712" stroke="#1f2937" stroke-width="3" />
+
+    <!-- Nebula Screen Inner Glow -->
+    <circle cx="120" cy="80" r="28" fill="url(#nebulaCoreGlow)" />
+    
+    <!-- Micro Constellation / 4-Point Star Sparkle in Screen -->
+    <path d="M 120,68 Q 120,80 132,80 Q 120,80 120,92 Q 120,80 108,80 Q 120,80 120,68 Z" fill="#ffffff" />
+
+    <!-- Left Handheld Controls (Cosmic D-Pad Glyph) -->
+    <path d="M 36,65 L 44,65 L 44,57 L 52,57 L 52,65 L 60,65 L 60,73 L 52,73 L 52,81 L 44,81 L 44,73 L 36,73 Z" fill="#38bdf8" />
+    <circle cx="48" cy="104" r="10" fill="#1f2937" stroke="#38bdf8" stroke-width="2.5" />
+
+    <!-- Right Handheld Controls (Diamond Action Buttons & Right Stick) -->
+    <circle cx="192" cy="62" r="3.5" fill="#f43f5e" />
+    <circle cx="182" cy="72" r="3.5" fill="#38bdf8" />
+    <circle cx="202" cy="72" r="3.5" fill="#38bdf8" />
+    <circle cx="192" cy="82" r="3.5" fill="#a855f7" />
+    <circle cx="192" cy="104" r="10" fill="#1f2937" stroke="#ec4899" stroke-width="2.5" />
+  </g>
+
+  <!-- Twin Cosmic Satellite Dust Motes (✦) -->
+  <path d="M 100,160 Q 100,170 110,170 Q 100,170 100,180 Q 100,170 90,170 Q 100,170 100,160 Z" fill="#38bdf8" opacity="0.8" />
+  <path d="M 410,340 Q 410,350 420,350 Q 410,350 410,360 Q 410,350 400,350 Q 410,350 410,340 Z" fill="#ec4899" opacity="0.8" />
+</svg>

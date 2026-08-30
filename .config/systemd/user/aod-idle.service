@@ -1,0 +1,12 @@
+[Unit]
+Description=Word Clock AMOLED AOD Idle Screensaver
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/aod-idle-daemon.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

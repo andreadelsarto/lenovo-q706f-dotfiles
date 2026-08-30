@@ -1,0 +1,25 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Andrea Del Sarto",
+                "Email": "andreadelsarto@users.noreply.github.com",
+                "Website": "https://github.com/andreadelsarto"
+            }
+        ],
+        "Category": "Application Launchers",
+        "Description": "Fullscreen Big Picture inspired native gaming launcher for Linux & KDE Plasma 6",
+        "Icon": "applications-games",
+        "Id": "org.kde.plasma.decklauncher",
+        "Name": "NebulaDeck Launcher",
+        "Version": "1.0.0",
+        "Website": "https://github.com/andreadelsarto/nebuladeck"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.launchermenu"
+    ],
+    "X-Plasma-RootPath": "contents"
+}

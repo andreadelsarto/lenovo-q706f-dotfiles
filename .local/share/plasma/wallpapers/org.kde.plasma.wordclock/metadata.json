@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "Plasma/Wallpaper",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Andrea Del Sarto",
+                "Email": "andreadelsarto@users.noreply.github.com"
+            }
+        ],
+        "Category": "Wallpapers",
+        "Description": "Minimalist Typographic Word Clock AMOLED AOD for KDE Plasma 6",
+        "Icon": "preferences-desktop-screensaver",
+        "Id": "org.kde.plasma.wordclock",
+        "Name": "Word Clock AMOLED AOD",
+        "Version": "1.0.0"
+    }
+}

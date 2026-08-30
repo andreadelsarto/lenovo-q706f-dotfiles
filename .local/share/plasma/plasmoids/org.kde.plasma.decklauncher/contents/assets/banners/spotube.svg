@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#061c10"/>
+      <stop offset="40%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <text x="60" y="240" font-family="sans-serif" font-weight="900" font-size="80" fill="#ffffff" letter-spacing="2">SPOTUBE</text>
+  <text x="64" y="290" font-family="sans-serif" font-weight="600" font-size="24" fill="#34d399" letter-spacing="6">HI-FI MUSIC STREAMING</text>
+</svg>

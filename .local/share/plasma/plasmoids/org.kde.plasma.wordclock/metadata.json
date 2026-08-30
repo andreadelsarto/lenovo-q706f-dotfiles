@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Andrea Del Sarto",
+                "Email": "andreadelsarto@users.noreply.github.com"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "Minimalist Typographic Word Clock AMOLED AOD",
+        "Icon": "preferences-desktop-screensaver",
+        "Id": "org.kde.plasma.wordclock",
+        "Name": "Word Clock AMOLED AOD",
+        "Version": "1.0.0"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml"
+}
